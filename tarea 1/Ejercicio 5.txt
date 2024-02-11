@@ -1,0 +1,17 @@
+void main() {
+  List<num> numeros = [5, 2, 8, 1, 9, 3, 6, 7, 4];
+  bool ordenAscendente = true;
+
+  print("Lista original: $numeros");
+
+  ordenarLista(numeros, ordenAscendente);
+  print("Lista ordenada ascendente: $numeros");
+
+  ordenAscendente = false;
+  ordenarLista(numeros, ordenAscendente);
+  print("Lista ordenada descendente: $numeros");
+}
+
+void ordenarLista(List<num> lista, bool ascendente) {
+  lista.sort((a, b) => ascendente ? a.compareTo(b) : b.compareTo(a));
+}
